@@ -389,8 +389,8 @@ header nav ul li a:hover {
   }
   .galeria-grid img {
     width: 90vw;
-    max-width: 350px;
-    height: 120px;
+    max-width: 400px;
+    height: 160px;
   }
 }
 
