@@ -193,7 +193,7 @@ header nav ul li a:hover {
   max-width: 235px;
   min-width: 170px;
   text-align: center;
-  position: relative;
+  position: center;
 }
 .service-block img {
   width: 50px;
@@ -391,13 +391,13 @@ form#contact-form textarea {
   padding: 1.2em 1.2em;
   border-radius: 14px;
   border: 1.5px solid #f3733540;
-  background: #f8fafb;
+  background: #f5f6fa;
   resize: none;
   box-sizing: border-box;
   outline: none;
   transition: border 0.2s, box-shadow 0.2s;
   margin-bottom: 0.2em;
-  color: #20232a;
+  color: #222;
 }
 form#contact-form input:focus,
 form#contact-form textarea:focus {
