@@ -90,7 +90,7 @@ header nav ul li a:hover {
   margin-bottom: 1.3em;
 }
 .cta-glass {
-  background: rgba(255,255,255,0.19);
+  background: #f37335;
   color: #fff;
   border: 2px solid #ffd43b;
   border-radius: 26px;
