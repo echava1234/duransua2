@@ -365,8 +365,8 @@ header nav ul li a:hover {
 }
 
 .galeria-grid img {
-  width: 200px;         /* MISMO ancho para todas */
-  height: 140px;        /* MISMA altura para todas */
+  width: 350px;         /* MISMO ancho para todas */
+  height: 190px;        /* MISMA altura para todas */
   object-fit: cover;    /* Recorta y centra la imagen */
   border-radius: 11px;
   box-shadow: 0 2px 8px #bfc8e644;
