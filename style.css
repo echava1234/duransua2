@@ -194,8 +194,11 @@ header nav ul li a:hover {
   position: relative;
 }
 .service-block img {
-  width: 50px;
-  margin-bottom: .6em;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.6em auto;
 }
 .service-block h3 {
   font-family: 'Poppins', Arial, sans-serif;
