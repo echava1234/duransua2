@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Contáctanos | DURANSUA SAS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Rubik:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Contáctanos | DURANSUA SAS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="logo" width="38">
-                <span>DURANSUA SAS</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html" class="active">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1 style="font-family:'Rubik',Arial,sans-serif;color:#2f67cf;">Contáctanos</h1>
-            <p>¿Tienes dudas o quieres una asesoría personalizada? Escríbenos y nuestro equipo te responderá pronto.</p>
-            <form action="https://formspree.io/f/xgvkjavp" method="POST" id="contact-form" autocomplete="off">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Correo Electrónico" required>
-                <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
-                <textarea name="mensaje" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea>
-                <button type="submit" class="btn-primary">Enviar Mensaje</button>
-            </form>
-            <div id="form-message" class="form-message"></div>
-            <div class="quick-contact-info" style="margin-top:2em;">
-                <div><b>Tel:</b> 6042394610 · 3174326996 · 3165281760</div>
-                <div><b>Email:</b> duransuasas@gmail.com</div>
-                <div><b>Dirección:</b> Medellín, Colombia</div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-content">
-            &copy; 2025 DURANSUA SAS. Todos los derechos reservados. Medellín, Colombia
-            <ul class="footer-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="contacto.html" class="active">Contáctanos</a></li>
-            </ul>
+  <header class="glass-header">
+    <div class="container header-flex">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Logo DURANSUA" width="46">
+        <span>DURANSUA SAS</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html" class="active">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1 class="section-title">Contáctanos</h1>
+      <p style="text-align:center;">¿Tienes dudas o quieres una asesoría personalizada? Escríbenos y te responderemos pronto.</p>
+      <form action="https://formspree.io/f/xgvkjavp" method="POST" id="contact-form" autocomplete="off">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Correo Electrónico" required>
+        <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+        <textarea name="mensaje" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea>
+        <button type="submit" class="cta-glass">Enviar Mensaje</button>
+      </form>
+      <div id="form-message" class="form-message"></div>
+      <div class="contact-banner" style="margin-top:2em;">
+        <div class="contact-banner-content">
+          <p>Tel: <b>6042394610</b> · <b>3174326996</b> · <b>3165281760</b><br>
+          Email: <b>duransuasas@gmail.com</b><br>
+          Medellín, Colombia</p>
         </div>
-    </footer>
-    <script>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-glass">
+    <div class="footer-flex">
+      <span>
+        &copy; 2025 DURANSUA SAS &middot; Medellín, Colombia
+      </span>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="contacto.html" class="active">Contáctanos</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
     document.getElementById('contact-form').addEventListener('submit', function(e) {
-        setTimeout(function() {
-            document.getElementById('form-message').textContent = "¡Mensaje enviado exitosamente! Pronto nos contactaremos contigo.";
-            document.getElementById('contact-form').reset();
-        }, 1000);
+      setTimeout(function() {
+        document.getElementById('form-message').textContent = "¡Mensaje enviado exitosamente! Pronto nos contactaremos contigo.";
+        document.getElementById('contact-form').reset();
+      }, 1000);
     });
-    </script>
+  </script>
 </body>
 </html>
