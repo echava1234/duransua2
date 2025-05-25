@@ -114,7 +114,8 @@ header nav ul li a:hover {
 .hero-img {
   flex: 1 1 43%;
   border-radius: 22px;
-  max-width: 310px;
+  max-width: 500px;
+  min-width: 360px; 
   margin-left: 2.2em;
   box-shadow: 0 2px 24px #3c3b6e22;
   display: block;
