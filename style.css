@@ -705,6 +705,8 @@ form .cta-outline {
 @media (max-width: 600px) {
   .cta-glass,
   .cta-outline {
+     display: block !important;
+    margin: 0 auto !important;
     width: auto !important;
     max-width: 220px !important;
     min-width: 120px;
