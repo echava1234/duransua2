@@ -602,3 +602,103 @@ form#contact-form button[type="submit"] {
     box-sizing: border-box;
   }
 }
+/* --- CENTRADO UNIVERSAL DE BOTONES Y MEJORAS DE SECCIONES EN MOVIL Y PC --- */
+
+/* 1. Centrado global para todos los botones principales */
+.cta-glass,
+.cta-outline {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: fit-content;
+}
+
+/* 2. Centrado para botones en formularios */
+form button,
+form .cta-glass,
+form .cta-outline {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3. Centrado para cualquier contenedor de botones específicos (si existen) */
+.button-container,
+.servicios-boton,
+.solicita-asesoria,
+.ver-todos-servicios {
+  text-align: center !important;
+}
+
+/* 4. Mejoras y centrado para la sección de "Nuestro Equipo" en móviles */
+@media (max-width: 600px) {
+  .team-modern {
+    margin: 1em 0 !important;
+    padding: 1.2em 1em !important;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  .team-flex {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box;
+  }
+  .team-profile {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 280px;
+    box-sizing: border-box;
+  }
+  .cta-glass,
+  .cta-outline {
+    width: 90%;
+    max-width: 340px;
+  }
+}
+
+/* 5. Márgenes y padding consistentes en la sección Sobre Nosotros para móviles */
+@media (max-width: 600px) {
+  .about-cards {
+    margin: 1.2em 0.2em 1.2em 0.2em !important;
+    padding: 0.5em 0.2em !important;
+  }
+  .about-card {
+    padding: 1em 0.7em !important;
+  }
+}
+
+/* 6. Centrado y márgenes consistentes para todos los títulos de sección */
+.section-title {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 0.9em;
+  text-align: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--azul-principal);
+  font-size: 2em;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.12em !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.7em !important;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    width: 100%;
+    max-width: 100vw;
+  }
+}
