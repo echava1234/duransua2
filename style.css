@@ -713,6 +713,7 @@ form .cta-outline {
     margin-left: 1.5em !important;
     margin-right: 1.5em !important;
     float: none !important;
+    box-sizing: border-box !important;
   }
   .button-container,
   .servicios-boton,
