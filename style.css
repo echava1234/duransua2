@@ -725,3 +725,10 @@ form .cta-outline {
     display: block !important;
   }
 }
+@media (max-width: 600px) {
+  .testimonios, .testimonios-container {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    box-sizing: border-box;
+  }
+}
