@@ -703,29 +703,27 @@ form .cta-outline {
   }
 }
 @media (max-width: 600px) {
+  /* Centra los botones dentro de cualquier contenedor */
   .cta-glass,
   .cta-outline {
-     display: block !important;
-    margin: 0 auto !important;
-    width: auto !important;
-    max-width: 320px !important;
-    min-width: 120px;
-    margin-left: 1em !important;
-    margin-right: 0em !important;
+    display: inline-block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     float: none !important;
+    min-width: 120px !important;
+    max-width: 320px !important;
+    padding-left: 1.5em !important;
+    padding-right: 1.5em !important;
     box-sizing: border-box !important;
   }
-  .button-container,
+  /* Fuerza el centrado de los botones en sus contenedores */
   .servicios-boton,
   .solicita-asesoria,
-  .ver-todos-servicios {
+  .ver-todos-servicios,
+  .button-container {
     text-align: center !important;
-    width: 100vw !important;
-    margin-left: 1!important;
-    margin-right: 0 !important;
-    padding-left: 1 !important;
+    padding-left: 0 !important;
     padding-right: 0 !important;
-    display: block !important;
   }
 }
 @media (max-width: 600px) {
