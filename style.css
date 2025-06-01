@@ -729,7 +729,8 @@ form .cta-outline {
   }
 }
 @media (max-width: 600px) {
-  .testimonios, .testimonios-container {
+  .testimonials-modern,
+  .testi-cards {
     padding-left: 1em !important;
     padding-right: 1em !important;
     box-sizing: border-box;
