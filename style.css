@@ -1007,9 +1007,9 @@ form .cta-outline {
     gap: 20px; /* Espacio entre elementos apilados */
     margin-bottom: 2em;
   }
-  .hero-content-alt,
-  .hero-slider-container {
-   max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  .hero-content-alt { /* Esta es la regla del texto, ya la tenías */
+    max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    width: 100%; /* Fuerza que ocupe el 100% */
     min-width: unset; /* Permite que el ancho sea flexible */
     text-align: center; /* Centra el texto cuando está apilado */
     padding: 1.5em; /* Reduce el padding para móvil si es necesario */
@@ -1017,6 +1017,17 @@ form .cta-outline {
     background: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente sólido para el fondo del texto */
     /* O si prefieres un degradado de arriba a abajo en móvil: */
     /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%); */
+  }
+
+  .hero-slider-container { /* Esta es la regla del CONTENEDOR del slider */
+    height: 350px; /* Ajusta la altura del slider para móvil */
+    /* --- AÑADIR/AJUSTAR ESTAS LÍNEAS AQUÍ PARA EL SLIDER CONTAINER --- */
+    max-width: 100%; /* Asegura que ocupe el 100% del ancho del main-content-wrapper */
+    width: 100%; /* Fuerza que ocupe el 100% */
+    min-width: unset; /* Elimina cualquier restricción de ancho mínimo */
+    box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño final */
+    margin: 0 auto; /* Centra el contenedor si hay espacio sobrante */
+    /* --- FIN DE LAS LÍNEAS A AÑADIR/AJUSTAR --- */
   }
   .hero-slider-container {
     height: 350px; /* Ajusta la altura del slider para móvil */
