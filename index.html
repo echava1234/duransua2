@@ -25,6 +25,50 @@
       </nav>
     </div>
   </header>
+   <!-- SECCIÓN HERO -->
+  <!-- HERO SLIDER en el inicio -->
+<section class="hero hero-slider">
+  <div class="hero-slider-row">
+    <!-- Slide 1 -->
+    <div class="hero-slide active">
+      <div class="hero-slide-img">
+        <img src="WhatsApp Image 2025-06-03 at 3.12.21 PM.jpeg" alt="Tránsito Medellín">
+      </div>
+      <div class="hero-slide-text">
+        <h1>Trámites de Tránsito sin Complicaciones</h1>
+        <p>Confía en RH Asesorías Tránsito para gestionar tu traspaso, levantamiento de prenda y otros trámites, de forma rápida y segura.</p>
+        <a href="servicios.html" class="cta-btn">Ver Servicios</a>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="hero-slide">
+      <div class="hero-slide-img">
+        <img src="imagenes/ff74673c-188d-41c2-8a14-6eabec6754ff.jpeg " alt="Asesoría Vehicular">
+      </div>
+      <div class="hero-slide-text">
+        <h1>Asesoría Vehicular Personalizada</h1>
+        <p>Te acompañamos en cada paso para que tus trámites sean simples y sin demoras.</p>
+        <a href="contactenos.html" class="cta-btn">Descubre cómo</a>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="hero-slide">
+      <div class="hero-slide-img">
+        <img src="WhatsApp Image 2025-06-03 at 4.22.50 PM.jpeg" alt="Documentos Digitales">
+      </div>
+      <div class="hero-slide-text">
+        <h1>Documentos Digitales Rápidos</h1>
+        <p>Obtén tus documentos de tránsito de forma digital, fácil y segura, sin filas ni esperas.</p>
+        <a href="contactenos.html" class="cta-btn">Solicítalos aquí</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slider-dots">
+    <span class="hero-dot active"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
+  </div>
+</section>
   <main>
     <section class="hero-alt">
       <div class="hero-content-alt">
@@ -162,5 +206,49 @@
       </ul>
     </div>
   </footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    let sliderInterval = null;
+
+    function showSlide(idx) {
+      slides.forEach((img, i) => {
+        img.classList.toggle('active', i === idx);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === idx);
+      });
+      currentSlide = idx;
+    }
+
+    function nextSlide() {
+      showSlide((currentSlide + 1) % totalSlides);
+    }
+
+    // Autoplay
+    function startSlider() {
+      sliderInterval = setInterval(nextSlide, 4500);
+    }
+    function stopSlider() {
+      clearInterval(sliderInterval);
+    }
+
+    // Dots click
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+        stopSlider();
+        startSlider();
+      });
+    });
+
+    // Iniciar slider al cargar
+    showSlide(0);
+    startSlider();
+  });
+</script>
 </body>
 </html>
