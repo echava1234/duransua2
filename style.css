@@ -1055,3 +1055,23 @@ form .cta-outline {
   }
   /* ... (Mantén tus otras reglas de 600px que no sean del hero) ... */
 }
+@media (max-width: 600px) {
+  /* ... tus otras reglas para 600px ... */
+
+  /* Para asegurar el centrado en pantallas aún más pequeñas */
+  .center {
+    text-align: center;
+    width: 100%;
+  }
+
+  .cta-outline {
+    display: block !important; /* Usa !important si otras reglas lo están anuldando */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 95% !important; /* Ajusta el ancho para pantallas muy pequeñas */
+    padding-left: 1em !important; /* Puede que necesites menos padding */
+    padding-right: 1em !important;
+  }
+
+  /* ... el resto de tus reglas para 600px ... */
+}
