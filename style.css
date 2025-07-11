@@ -865,14 +865,17 @@ form .cta-outline {
 
 /* Reajuste del hero-content-alt para el nuevo layout */
 .hero-content-alt {
-  flex: 1; /* Permite que ocupe el espacio disponible */
-  min-width: 300px; /* Ancho mínimo para la columna de texto */
-  max-width: 50%; /* Limita su ancho máximo a la mitad */
-  color: var(--azul-principal); /* Cambia el color del texto para el fondo blanco */
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1;
+ min-width: 300px;
+ max-width: 50%;
+ color: var(--azul-principal);
+ text-align: left;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding: 2em;
+ border-radius: 10px;
+ background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 .hero-content-alt h1 {
   font-family: 'Poppins', Arial, sans-serif;
