@@ -1009,10 +1009,14 @@ form .cta-outline {
   }
   .hero-content-alt,
   .hero-slider-container {
-    max-width: 100%; /* Ocupa todo el ancho disponible */
-    min-width: unset; /* Quita el min-width para flexibilidad */
-    width: 100%;
-    text-align: center; /* Centra el texto en móvil */
+   max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    min-width: unset; /* Permite que el ancho sea flexible */
+    text-align: center; /* Centra el texto cuando está apilado */
+    padding: 1.5em; /* Reduce el padding para móvil si es necesario */
+    /* Para el degradado en móvil, si se apilan, podemos cambiarlo a un fondo sólido blanco */
+    background: rgba(255, 255, 255, 0.95); /* Blanco semi-transparente sólido para el fondo del texto */
+    /* O si prefieres un degradado de arriba a abajo en móvil: */
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%); */
   }
   .hero-slider-container {
     height: 350px; /* Ajusta la altura del slider para móvil */
