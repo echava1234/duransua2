@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap');
 
+/* Universal Box-sizing para evitar desbordamientos */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevenir scroll horizontal en el cuerpo */
+body {
+  overflow-x: hidden;
+}
 :root {
   --azul-principal: #0d1a4a;
   --azul-secundario: #2867b2;
@@ -827,4 +836,204 @@ form .cta-outline {
 
 .hero-dot.active {
     background-color: #ffffff; /* Color del punto activo */
+}
+/* NUEVO CONTENEDOR BLANCO PARA EL CONTENIDO PRINCIPAL */
+.main-content-wrapper {
+    background-color: var(--blanco); /* Fondo blanco */
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 40px auto; /* Centra el wrapper y le da margen arriba/abajo */
+    padding: 20px; /* Padding blanco alrededor de todo el contenido de main */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: relative; /* Para posibles posicionamientos internos */
+}
+/* HERO */
+/* La clase hero-alt original se modifica a hero-split para el layout de dos columnas */
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px; /* Espacio entre el texto y el slider */
+  padding: 2.7em 0; /* Padding vertical, el horizontal lo da .main-content-wrapper */
+  /* El fondo y la sombra se moverán al .main-content-wrapper */
+  /* background: linear-gradient(120deg, var(--rojo-principal) 0%, var(--azul-principal) 85%); */
+  /* border-radius: 0 0 45px 45px; */
+  /* box-shadow: 0 4px 42px #e5393555; */
+  margin-bottom: 2.5em; /* Margen debajo de la sección hero */
+  overflow: hidden; /* Importante para contener el slider */
+}
+
+/* Reajuste del hero-content-alt para el nuevo layout */
+.hero-content-alt {
+  flex: 1; /* Permite que ocupe el espacio disponible */
+  min-width: 300px; /* Ancho mínimo para la columna de texto */
+  max-width: 50%; /* Limita su ancho máximo a la mitad */
+  color: var(--azul-principal); /* Cambia el color del texto para el fondo blanco */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-content-alt h1 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.2em;
+  margin-bottom: .33em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--azul-principal); /* Asegura que el título sea visible en blanco */
+}
+.gradient-text {
+  /* Mantén tu degradado original si funciona bien, o ajusta si necesitas más contraste */
+  background: linear-gradient(90deg, var(--rojo-principal), var(--azul-principal), var(--azul-secundario));
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-content-alt p {
+  font-size: 1.15em;
+  margin-bottom: 1.3em;
+  color: #555; /* Color neutro para el texto del párrafo */
+}
+.cta-glass {
+  /* Mantén el estilo de tu botón, ajustando la sombra para el fondo blanco */
+  background: var(--azul-principal);
+  color: var(--blanco);
+  border: 2px solid var(--rojo-principal);
+  border-radius: 26px;
+  font-size: 1.09em;
+  font-weight: 700;
+  padding: 0.8em 2.2em;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2); /* Ajusta la sombra para el fondo blanco */
+  display: inline-block;
+  cursor: pointer;
+}
+.cta-glass:hover {
+  background: var(--rojo-principal);
+  color: var(--blanco);
+}
+
+/* --- ESTILOS PARA EL CONTENEDOR DEL SLIDER (el reemplazo de .hero-img) --- */
+.hero-slider-container {
+  flex: 1; /* Permite que ocupe el espacio restante */
+  min-width: 300px; /* Ancho mínimo para el slider */
+  max-width: 50%; /* Limita su ancho máximo a la mitad */
+  position: relative;
+  height: 450px; /* Altura fija para el slider - AJUSTA ESTO SEGÚN TUS NECESIDADES */
+  overflow: hidden;
+  border-radius: 15px; /* Coincide con el border-radius del wrapper o ajusta */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0; /* Fondo de respaldo para el área del slider */
+}
+
+/* Estilos de los slides individuales */
+.hero-slider-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crucial para que las imágenes cubran el área sin distorsionarse */
+  display: block;
+}
+
+/* Estilos de los puntos de navegación del slider */
+.hero-slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.4); /* Puntos más oscuros para fondo blanco */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-dot.active {
+  background-color: var(--rojo-principal); /* Punto activo en rojo */
+}
+@media (max-width: 990px) {
+  /* Ajustes para el wrapper en pantallas medianas */
+  .main-content-wrapper {
+      padding: 15px; /* Reduce padding del wrapper */
+      margin: 20px auto;
+      border-radius: 10px;
+  }
+  /* La sección hero dividida se apila en columnas */
+  .hero-split {
+    flex-direction: column; /* Apila texto y slider */
+    padding: 2em 0; /* Ajusta padding vertical */
+    gap: 20px; /* Espacio entre elementos apilados */
+    margin-bottom: 2em;
+  }
+  .hero-content-alt,
+  .hero-slider-container {
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+    min-width: unset; /* Quita el min-width para flexibilidad */
+    width: 100%;
+    text-align: center; /* Centra el texto en móvil */
+  }
+  .hero-slider-container {
+    height: 350px; /* Ajusta la altura del slider para móvil */
+  }
+  .hero-content-alt h1 {
+    font-size: 2em; /* Ajusta el tamaño de fuente */
+  }
+  /* ... (Mantén tus otras reglas de 990px que no sean del hero) ... */
+}
+
+@media (max-width: 600px) {
+  /* Ajustes para el wrapper en pantallas pequeñas */
+  .main-content-wrapper {
+      padding: 10px; /* Reduce aún más el padding */
+      margin: 15px auto;
+  }
+  .hero-content-alt h1 {
+    font-size: 1.5em; /* Fuente más pequeña */
+  }
+  .hero-content-alt p {
+    font-size: 1em;
+  }
+  .hero-slider-container {
+      height: 280px; /* Slider más pequeño */
+  }
+  /* ... (Mantén tus otras reglas de 600px que no sean del hero) ... */
 }
